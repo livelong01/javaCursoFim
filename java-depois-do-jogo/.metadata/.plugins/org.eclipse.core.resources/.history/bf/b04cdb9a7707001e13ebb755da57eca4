@@ -1,0 +1,14 @@
+package application;
+
+import java.io.File;
+
+public class Program {
+
+	public static void main(String[] args) {
+		
+		File file = new File("~/Documentos/Estudo/Java/in.txt");
+		file.canRead();
+
+	}
+
+}

@@ -1,0 +1,20 @@
+package application;
+
+public class Program {
+
+	public static void main(String[] args) {
+		
+		/*
+		 * Agora vamos usar uma funcao stream que escreve arquivos
+		 * seja texto, seja o que for. Voce pode criar arquivos se ele n existir
+		 * se ele ja existir ele sera zerado e recriado.
+		 * Entretanto, há uma maneira de acrescentar conteudo no arquivo existente,
+		 * basta escrever new FileWriter(path, true). O true serve para adc conteudo
+		 * sem apagar o que ja havia dentro dele.
+		 */
+		
+		
+
+	}
+
+}
