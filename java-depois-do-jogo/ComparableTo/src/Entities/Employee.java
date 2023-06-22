@@ -34,7 +34,7 @@ public class Employee implements Comparable<Employee>{
 
 	@Override
 	public int compareTo(Employee other) {
-		return name.compareTo(other.getName());
+		return salary.compareTo(other.getSalary());
 	}
 	
 	
