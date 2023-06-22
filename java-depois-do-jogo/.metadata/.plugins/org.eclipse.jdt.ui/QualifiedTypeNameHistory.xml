@@ -11,4 +11,9 @@
     <fullyQualifiedTypeName name="model.entities.Installment"/>
     <fullyQualifiedTypeName name="model.services.OnlinePaymentService"/>
     <fullyQualifiedTypeName name="model.entities.Contract"/>
+    <fullyQualifiedTypeName name="model.entities.Circle"/>
+    <fullyQualifiedTypeName name="model.enums.Color"/>
+    <fullyQualifiedTypeName name="model.entities.Rectangle"/>
+    <fullyQualifiedTypeName name="devices.Scanner"/>
+    <fullyQualifiedTypeName name="devices.ComboDevice"/>
 </qualifiedTypeNameHistroy>
