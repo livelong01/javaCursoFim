@@ -14,13 +14,16 @@ public class Program {
 		System.out.print("How many values ?");
 		int n = sc.nextInt();
 		
+		ps.addValue("Maria");
+		
 		for ( int i = 0; i < n; i++) {
 			int value = sc.nextInt();
 			ps.addValue(value);
 		}
 		
 		ps.print();
-		System.out.println("First: "+ ps.first());
+		Integer x = (Integer) ps.first();
+		System.out.println("First: "+ x);
 		
 		
 		sc.close();
