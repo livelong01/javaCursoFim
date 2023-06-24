@@ -3,15 +3,22 @@ package services;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PrintService {
-
-	private List<Object> list = new ArrayList<>();
+public class PrintService <T> {
+	/*
+	 * Esse "T" é generico, pode ser qualquer coisa o nome.
+	 * Isso garante que o primeiro "tipo" de objeto adc na lsita
+	 * sera o tipo da lista. Por ex; se adc primeiro um string
+	 * a lista sera string e n aceitara outros tipos.
+	 */
 	
-	public void addValue (Object value) {
+	
+	private List<T> list = new ArrayList<>();
+	
+	public void addValue (T value) {
 		list.add(value);
 	}
 	
-	public Object first() {
+	public T first() {
 		if (list.isEmpty()) {
 			throw new IllegalStateException("List is empy!");
 			}
