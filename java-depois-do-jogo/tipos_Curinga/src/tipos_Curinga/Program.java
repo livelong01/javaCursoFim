@@ -27,6 +27,14 @@ public class Program {
 	
 	}
 	public static void printList(List<?> list) {
+		//list.add(3);
+		
+		/*
+		 * Observacao importante, nao se pode adc nada na lista curinga
+		 * pois nao se sabe qual tipo vai ser usado na lista. POr isso
+		 * o compilador bloqueia esse tipo de acao e apenas faz leitura.
+		 */
+		
 		for (Object obj : list) {
 			System.out.println(obj);
 		}
