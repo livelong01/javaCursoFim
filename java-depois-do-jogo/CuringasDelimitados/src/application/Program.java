@@ -34,6 +34,14 @@ public class Program {
  */
 	
 	public static double totalArea(List<? extends Shape> list) {
+		
+		/*
+		 * Porem o compilador, mesmo usando extends, ainda nao
+		 * deixa adc nada na lista, segue dando erro. Esse é o preco de 
+		 * usar o tipo coringa delimitado.
+		 */
+		
+		//list.add(new Rectangle(3.0, 4.0));
 		double sum = 0.0;
 		for (Shape s : list ) {
 			sum += s.area();
