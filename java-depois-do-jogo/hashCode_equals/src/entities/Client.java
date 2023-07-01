@@ -36,7 +36,7 @@ public void setEmail(String email) {
 
 @Override
 public int hashCode() {
-	return Objects.hash(name);
+	return Objects.hash(email, name);
 }
 
 
@@ -49,8 +49,16 @@ public boolean equals(Object obj) {
 	if (getClass() != obj.getClass())
 		return false;
 	Client other = (Client) obj;
-	return Objects.equals(name, other.name);
+	return Objects.equals(email, other.email) && Objects.equals(name, other.name);
 }
+
+/*
+ * Isso faz com que ele compare nome e mail, sendoo assim, 
+ * mais eficiente na hora da comparacao, pois da para diferenciar
+ * cada cliente de uma forma mais assertiva.
+ */
+
+
 
 
 
