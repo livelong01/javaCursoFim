@@ -38,9 +38,18 @@ public class Program {
 		
 		
 		
+		set.remove("Tablet"); // remove o string.
+		/*
+		 * foi usado um predicado dentro do removeif
+		 * ou seja, x (objeto dentro da lista) vai ser
+		 * comparado com objetos x.length >=3, ou seja,
+		 * para ser REMOVIDO da lista o objeto tem q ter mais
+		 * de tres caracteres de tamanho.
+		 */
+		//set.removeIf(x -> x.length() >= 3);
+		set.removeIf(x -> x.charAt(0) == 'T');
 		
 		
-		System.out.println(set.contains("Notebook"));
 		
 		for (String p : set) {
 			System.out.println(p);

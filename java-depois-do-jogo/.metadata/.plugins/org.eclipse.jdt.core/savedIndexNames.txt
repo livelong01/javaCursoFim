@@ -12,7 +12,6 @@ INDEX VERSION 1.132+/home/jonathan/Documentos/Java/java-depois-do-jogo/.metadata
 2808828962.index
 1737189783.index
 3659629937.index
-4161657434.index
 303558310.index
 846015601.index
 1779425197.index
