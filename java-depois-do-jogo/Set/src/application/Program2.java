@@ -18,7 +18,7 @@ public class Program2 {
 		System.out.println(c);
 		/*
 		 * addAll serve pra unir os conjuntos, tudo que tiver em um vai ter no outro
-		 * mesmo que repetido.
+		 * nao adc duas vezes o mesmo elemento.
 		 */
 		
 		
@@ -37,7 +37,7 @@ public class Program2 {
 		System.out.println(e);
 		
 		/*
-		 * Remove todos que forem iguais em ambos.
+		 * Remove todos que apenas um possui é mantido.
 		 */
 
 	}
