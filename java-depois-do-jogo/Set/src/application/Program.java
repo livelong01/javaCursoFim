@@ -35,10 +35,11 @@ public class Program {
 		set.add("Tv");
 		set.add("Tablet");
 		set.add("Notebook");
+		set.add("Notebook");
 		
 		
 		
-		set.remove("Tablet"); // remove o string.
+		//set.remove("Tablet"); // remove o string.
 		/*
 		 * foi usado um predicado dentro do removeif
 		 * ou seja, x (objeto dentro da lista) vai ser
@@ -47,7 +48,7 @@ public class Program {
 		 * de tres caracteres de tamanho.
 		 */
 		//set.removeIf(x -> x.length() >= 3);
-		set.removeIf(x -> x.charAt(0) == 'T');
+		//set.removeIf(x -> x.charAt(0) == 'T');
 		
 		
 		
