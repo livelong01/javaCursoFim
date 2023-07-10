@@ -1,6 +1,6 @@
 package entities;
 
-public class Product implements Comparable<Product>{
+public class Product {
 
 	private String name;
 	private Double price;
@@ -33,17 +33,6 @@ public class Product implements Comparable<Product>{
 		return "Product [name=" + name + ", price=" + price + "]";
 	}
 
-	@Override
-	public int compareTo(Product o) {
-		return name.compareToIgnoreCase(o.getName());
-	}
-	
-	/*
-	 * O problema do comparador estar implementado na classe Product 
-	 * é indesejado, pq a manutencao fica mais dificil e precisa mudar
-	 * mais coisas que o necessario. Qualquer alteracao que se quiser
-	 * fazer no comparator, precisara abrir a classe product.
-	 */
 
 	
 	
