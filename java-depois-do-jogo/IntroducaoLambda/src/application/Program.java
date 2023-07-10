@@ -16,21 +16,15 @@ public class Program {
 		list.add(new Product ("Notebook", 1200.00));
 		list.add(new Product ("Tablet", 450.00));
 		
-		Comparator<Product> comp = new Comparator<Product>() {
-
-			@Override
-			public int compare(Product p1, Product p2) {
-				return p1.getName().compareToIgnoreCase(p2.getName());
-			}
-			
+		Comparator<Product> comp = (p1, p2) ->{
+			return p1.getName().compareToIgnoreCase(p2.getName());
 		};
 		
 		/*
-		 * Nesse caso, ele criou um compareTO ANONIMO DENTRO DA CLASSE principal
-		 * NAO PRECISA mais de uma classe separada (myCOmparator) para fazer
-		 * esse serviço. Essa faz direto. Entretanto, essa declaracao
-		 * dentro da classe e do tamanho que é, nao fica bonito e nem é
-		 * recomendado.
+		 * Nesse caso, o comparator foi feito atraves de uma ARROW FUNCTION
+		 * por causa da setinha "->". Ela vc apenas precisa determinar
+		 * os parametros (p1 e p2), fazer a seta, e entre chaves
+		 * descrever a funcao "1.getName().compareToIgnoreCase..."
 		 */
 		
 		list.sort(comp);
