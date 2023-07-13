@@ -22,7 +22,14 @@ public class Porgram {
 		list.add(new Product("Tablet", 350.50));
 		list.add(new Product("HD Case", 80.90));
 
-		list.removeIf(new ProductPredicate());
+		list.removeIf(Product :: staticProductPredicate);
+		
+		/*
+		 * Voce pode instanciar o static metodo que esta direto na classe
+		 * product, porem tem aquele problema de se precisar terá
+		 * que fazer alteracoes diretamente no product e isso nao
+		 * é bem visto e a manutencao é mais dificil.
+		 */
 		
 		for (Product p : list) {
 			System.out.println(p);
