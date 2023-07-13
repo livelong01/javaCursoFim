@@ -3,9 +3,9 @@ package application;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
+import java.util.function.Predicate;
 
 import entities.Product;
-import util.ProductPredicate;
 
 
 
@@ -22,14 +22,12 @@ public class Porgram {
 		list.add(new Product("Tablet", 350.50));
 		list.add(new Product("HD Case", 80.90));
 
-		list.removeIf(Product :: nonstaticProductPredicate);
+		double min = 100.0;
+		Predicate<Product> pred = p -> p.getPrice() >= min;
 		
-		/*
-		 * Voce pode instanciar o static metodo que esta direto na classe
-		 * product, porem tem aquele problema de se precisar terá
-		 * que fazer alteracoes diretamente no product e isso nao
-		 * é bem visto e a manutencao é mais dificil.
-		 */
+		
+		list.removeIf(pred);
+		
 		
 		for (Product p : list) {
 			System.out.println(p);
