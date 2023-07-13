@@ -22,7 +22,7 @@ public class Porgram {
 		list.add(new Product("Tablet", 350.50));
 		list.add(new Product("HD Case", 80.90));
 
-		list.removeIf(Product :: staticProductPredicate);
+		list.removeIf(Product :: nonstaticProductPredicate);
 		
 		/*
 		 * Voce pode instanciar o static metodo que esta direto na classe
