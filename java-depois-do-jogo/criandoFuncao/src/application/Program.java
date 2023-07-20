@@ -23,7 +23,14 @@ public class Program {
 
 		ProductService ps = new ProductService();
 		
-		double sum = ps.filteredSum(list, p -> p.getName().charAt(0) == 'M');
+		double sum = ps.filteredSum(list, p -> p.getPrice() < 100.0);
+		
+		/*
+		 * No primeiro caso, o predicado, ficava na funcao IF dentro da classe ProductService, 
+		 * porem com essa modificacao, se coloca o PREDICATED como parametro da funcao FilteredSUM, 
+		 * fazendo assim poder ser feito a alteracao do predicated direto no codigo, sem ter a necessidade
+		 * de modificar a classe ProductService. O que é OTIMO para manutencao.
+		 */
 		
 		System.out.println("Sum = " + String.format("%.2f", sum));
 	}
