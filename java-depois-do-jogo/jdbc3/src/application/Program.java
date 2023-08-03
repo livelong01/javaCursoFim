@@ -19,37 +19,28 @@ public class Program {
 		SimpleDateFormat sdf = new SimpleDateFormat ("dd/MM/yyyy");
 		
 		Connection conn = null;
+	
 		PreparedStatement st = null;
 		
+		
 		try {
+			
 			conn = DB.getConnection();
 			/*
-			 * Conn = serve para conectar com o servidor
-			 * st = para alterar o banco de dados.
-			 * O que esta em maiusculo, é o comando SQL.
-			 * OU SEJA, INSERT INTO ( adicione na tabela "seller")
-			 * Em baixo segue os campos que serao adc informacao.
-			 * "VALUES" INDICA O LOCAL PARA ADC OS VALORES DE CADA CAMPO
-			 * E as interrogacoes, sao tipos coringas. QUe ficam em espera
-			 * para por fim adc as informacoes em cada campo um outro momento.
-			 */
 			st = conn.prepareStatement(
 					"INSERT INTO seller "
 					+ "(Name, Email, BirthDate, BaseSalary, DEpartmentId) "
 					+ "VALUES "
 					+ "(?, ?, ?, ?, ?)",
 					Statement.RETURN_GENERATED_KEYS);
-			/*
-			 * Nesse caso abaixo, o numero "1" representa a primeira "?"
-			 * e do lado o valor a ser adc. 
-			 * Lembrando que st. set deve ser do tipo que sera adc. Nesse caso, 
-			 * uma STRING.
-			 */
+
 			st.setString(1, "Carl Purple");
 			st.setString(2, "carl@gmail.com");
 			st.setDate(3, new java.sql.Date(sdf.parse("22/04/1985").getTime()));
 			st.setDouble(4, 3000);
 			st.setInt(5, 4);
+			
+			*/
 			
 			/*
 			 * No fim, precisamos executar a atualizacao, 
@@ -60,6 +51,12 @@ public class Program {
 			 * chamada rowsAffected para mostrar o resultado
 			 * de linhas alteradas.
 			 */
+		
+		st = conn.prepareStatement(
+				"insert into department (Name) values ('D1'), ('D2')",
+				Statement.RETURN_GENERATED_KEYS);
+		
+		
 			int rowsAffected = st.executeUpdate();
 			
 			if (rowsAffected > 0 ) {
@@ -74,9 +71,6 @@ public class Program {
 			}
 		}
 		catch (SQLException e ) {
-			e.printStackTrace();
-		}
-		catch (ParseException e) {
 			e.printStackTrace();
 		}
 		finally {
