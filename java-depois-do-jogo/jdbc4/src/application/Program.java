@@ -17,7 +17,6 @@ public class Program {
 		/*
 		 * Atualizar o salario de um vendedor na base de dados.
 		 */
-		SimpleDateFormat sdf = new SimpleDateFormat ("dd/MM/yyyy");
 		
 		Connection conn = null;
 		PreparedStatement st = null;
@@ -44,7 +43,7 @@ public class Program {
 			
 			int rownsAffected = st.executeUpdate();
 			
-			System.out.println("Done ROws Affected: " + rownsAffected);
+			System.out.println("Done Rows Affected: " + rownsAffected);
 			
 		}
 		catch ( SQLException e) {

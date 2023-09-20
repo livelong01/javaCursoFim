@@ -18,7 +18,6 @@ public class Program {
 		/*
 		 * Atualizar o salario de um vendedor na base de dados.
 		 */
-		SimpleDateFormat sdf = new SimpleDateFormat ("dd/MM/yyyy");
 		
 		Connection conn = null;
 		PreparedStatement st = null;
@@ -29,7 +28,7 @@ public class Program {
 			 * se nao colocar a condicional "Where" vai deletar todos os
 			 * dados do DEPARTMENT.
 			 * Para a delecao rolar, ela nao pode estar vinculado a nada.
-			 * Por ex: se tiver algum seler com o id desse departamento 
+			 * Por ex: se tiver algum seller com o id desse departamento 
 			 * vinculado, ele dará um erro. Por isso o DbIntegrityException
 			 * foi criado, para personalizar esse tipo de erro. O erro é
 			 * do tipo referencial, qd vc deleta algo q esta referenciado

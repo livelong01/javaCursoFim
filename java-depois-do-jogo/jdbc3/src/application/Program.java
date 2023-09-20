@@ -27,9 +27,14 @@ public class Program {
 			
 			conn = DB.getConnection();
 			/*
+			 * o conn.preparestatement pede uma insercao de comandos, para que 
+			 * ele realize alguma alteracao no banco de dados.
+			 * 
+			 */
+			
 			st = conn.prepareStatement(
 					"INSERT INTO seller "
-					+ "(Name, Email, BirthDate, BaseSalary, DEpartmentId) "
+					+ "(Name, Email, BirthDate, BaseSalary, DepartmentId) "
 					+ "VALUES "
 					+ "(?, ?, ?, ?, ?)",
 					Statement.RETURN_GENERATED_KEYS);
@@ -40,7 +45,7 @@ public class Program {
 			st.setDouble(4, 3000);
 			st.setInt(5, 4);
 			
-			*/
+			
 			
 			/*
 			 * No fim, precisamos executar a atualizacao, 
@@ -51,11 +56,11 @@ public class Program {
 			 * chamada rowsAffected para mostrar o resultado
 			 * de linhas alteradas.
 			 */
-		
+		/*
 		st = conn.prepareStatement(
 				"insert into department (Name) values ('D1'), ('D2')",
 				Statement.RETURN_GENERATED_KEYS);
-		
+		*/
 		
 			int rowsAffected = st.executeUpdate();
 			
@@ -71,6 +76,9 @@ public class Program {
 			}
 		}
 		catch (SQLException e ) {
+			e.printStackTrace();
+		}
+		catch (ParseException e) {
 			e.printStackTrace();
 		}
 		finally {
